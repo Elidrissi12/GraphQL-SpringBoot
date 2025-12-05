@@ -1,0 +1,82 @@
+# Définit les types de compte possibles
+enum TypeCompte {
+    COURANT
+    EPARGNE
+}
+
+# Définit l'objet Compte
+type Compte {
+    id: ID
+    solde: Float
+    dateCreation: String
+    type: TypeCompte
+}
+
+# Définit le type pour les statistiques de totalSolde
+type Stats {
+    count: Int
+    sum: Float
+    average: Float
+}
+
+# Définit les opérations de lecture (Query)
+type Query {
+    allComptes: [Compte]
+    compteById(id: ID!): Compte
+    totalSolde: Stats
+}
+
+# Définit l'objet d'entrée pour la création
+# Il est préférable d'utiliser un 'input' pour les mutations
+input CompteInput {
+    solde: Float!
+    dateCreation: String!
+    type: TypeCompte!
+}
+
+# Définit les opérations d'écriture (Mutation)
+type Mutation {
+    saveCompte(compte: CompteInput): Compte
+}
+
+# Enum pour les types de transaction
+enum TypeTransaction {
+    DEPOT
+    RETRAIT
+}
+
+# Type pour une transaction
+type Transaction {
+    id: ID
+    date: String
+    montant: Float
+    type: TypeTransaction
+    compte: Compte
+}
+
+# Input pour ajouter une transaction
+input TransactionRequest {
+    compteId: ID!
+    montant: Float!
+    date: String!
+    type: TypeTransaction!
+}
+
+# Type pour les statistiques de transaction
+type TransactionStats {
+    count: Int
+    sumDepots: Float
+    sumRetraits: Float
+}
+
+# Ajouter les nouvelles requêtes au type Query existant
+extend type Query {
+    compteTransactions(id: ID!): [Transaction]
+    allTransactions: [Transaction]
+    transactionStats: TransactionStats
+}
+
+# Ajouter la nouvelle mutation au type Mutation existant
+extend type Mutation {
+    addTransaction(transaction: TransactionRequest): Transaction
+}
