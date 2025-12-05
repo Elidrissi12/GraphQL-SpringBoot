@@ -1,4 +1,6 @@
 # demonstration
-<img width="1919" height="1199" alt="Screenshot 2025-12-03 223636" src="https://github.com/user-attachments/assets/5212ae27-4f82-4651-8cef-eabf939d064b" />
-<img width="1919" height="1199" alt="Screenshot 2025-12-03 223403" src="https://github.com/user-attachments/assets/fa032524-dd9a-4d73-a5f3-57fc8721d09d" />
-<img width="1820" height="1025" alt="Screenshot 2025-12-03 223208" src="https://github.com/user-attachments/assets/b0696e8e-0e73-44b9-9488-966e885dd5b9" />
+# Récupérer tous les comptes
+![WhatsApp Bild 2025-12-05 um 16 56 13_ddb4b1c5](https://github.com/user-attachments/assets/4b815fa8-ce32-4214-98f8-a782d067bb97)
+# Requête 2 : Récupérer un compte par identifiant (id)
+![WhatsApp Bild 2025-12-05 um 16 56 44_a685ec56](https://github.com/user-attachments/assets/9c862ab8-9552-46c8-b75c-54da4a3aa248)
+![WhatsApp Bild 2025-12-05 um 16 57 17_964cf74d](https://github.com/user-attachments/assets/2eaa9a88-aeac-4f15-a876-73b457aeb8ab)
